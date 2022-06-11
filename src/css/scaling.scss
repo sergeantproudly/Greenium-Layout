@@ -1,0 +1,41 @@
+$font-sizes: (
+	desktop: 18,
+	tablet: 18,
+	mobile: 14
+);
+$dimensions: (
+	desktop: 1440,
+	tablet: 1024,
+	mobile: 320	
+);
+
+@function pxToVw($value, $dimension) {
+	@return $value * 100 / map-get($dimensions, $dimension) + vw;
+}
+@mixin font-size($sizeValue) {
+	font-size: $sizeValue + px;
+	font-size: pxToVw($sizeValue, mobile);
+
+	@media (min-width: $adaptive-width-tablet) {
+		font-size: pxToVw($sizeValue, tablet);
+	}
+
+	@media (min-width: $adaptive-width-desktop) {
+		font-size: pxToVw($sizeValue, desktop);
+	}
+}
+@mixin fs($sizeValue) {
+	@include font-size($sizeValue);
+}
+@function vw($value, $dimension: mobile) {
+	@return pxToVw($value, $dimension);
+}
+@function vwd($value) {
+	@return pxToVw($value, desktop);
+}
+@function vwt($value) {
+	@return pxToVw($value, tablet);
+}
+@function vwm($value) {
+	@return pxToVw($value, mobile);
+}

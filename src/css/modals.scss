@@ -1,0 +1,340 @@
+#modal-fadeout {
+	display: none;
+	background-color: $color-black;
+	z-index: 99;
+	position: fixed;
+	opacity: .7;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	.html-modal & {
+		z-index: 104;
+	}
+}
+
+.modal-wrapper {
+	background-color: $color-white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 110;
+	display: flex;
+	display: none;
+	overflow-y: scroll;
+	align-items: center;
+
+	@media (min-width: $adaptive-width-tablet) {
+		background-color: transparent;
+	}
+
+	& > .modal {
+		overflow: hidden;
+		line-height: 0;
+		display: block;
+		width: 100%;
+		flex-basis: 100%;
+		vertical-align: middle;
+
+		@media (min-width: $adaptive-width-tablet) {
+			padding: 15vh 10%;
+		}
+	}
+}
+
+.modal {
+	& > .contents {
+		background-color: $color-white;
+		color: $color-black;
+		padding: 20px $padding-edges-mobile 25px;
+		position: relative;
+		width: 100%;
+		font-size: 14px;
+		line-height: 1.2;
+
+		@media (min-width: $adaptive-width-tablet) {
+			font-size: 16px;
+			line-height: 1.33;
+			padding: 36px 68px;
+			margin: auto;
+			box-shadow: 0px 14px 24px -14px rgba(56, 64, 84, 0.34);
+			@include radius(16px);
+		}
+
+		@media (min-width: $adaptive-width-desktop) {
+			font-size: 18px;
+			max-width: 1259px;
+		}
+
+		.modal-close {
+			display: block;
+			color: $color-black;
+			width: 72px;
+			height: 72px;
+			font-size: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			opacity: 1;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				width: 88px;
+				height: 88px;
+			}
+
+			&:after {
+				content: '';
+			    display: block;
+			    width: 20px;
+			    height: 20px;
+			    background: url('../images/ico_close_mob.svg') no-repeat;
+			    background-size: contain;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+
+			    @media (min-width: $adaptive-width-tablet-wide) {
+			    	background-image: url('../images/ico_close.svg');
+			    	width: 28px;
+			    	height: 28px;
+			    }
+			}
+		}
+
+		h1,
+		.h1 {
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.2;
+			margin-bottom: 24px;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				font-size: 30px;
+				margin-bottom: 32px;
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				font-size: 40px;
+			}
+		}
+
+		.text {
+			margin: -11px 0 32px;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				margin: 0 0 20px;
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				font-size: 18px;
+			}
+		}
+
+		.form {
+			.input {
+				margin-bottom: 21px;
+
+				input[type="text"],
+				input[type="email"],
+				input[type="tel"],
+				input[type="password"] {
+					background-color: #F8F8F8;
+					padding: 17px 20px;
+					margin-bottom: 0;
+					@include radius(8px);
+
+					&.attempted:invalid {
+						background-color: #FFF1F0;
+					}
+				}
+
+				&.focused {
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"],
+					input[type="password"] {						
+						padding-top: 22px;
+						padding-bottom: 12px;
+					}
+				}
+
+				textarea {
+					background-color: #F8F8F8;
+					padding: 17px 20px;
+					height: 81px;
+					margin-bottom: 0;
+					width: 100%;
+					resize: vertical;
+					@include radius(8px);
+
+					&.attempted:invalid {
+						background-color: #FFF1F0;
+					}
+				}
+
+				&.focused {
+					textarea {						
+						padding-top: 22px;
+						padding-bottom: 11px;
+					}
+				}
+			}
+
+			.cb-line {
+				position: relative;
+				text-align: left;
+				margin-bottom: 20px;
+
+				@media (min-width: $adaptive-width-tablet) {
+					margin-bottom: 28px;
+				}
+
+				input[type="checkbox"] {
+					position: absolute;
+					z-index: -1;
+					opacity: 0;
+
+					& + label {
+						@media (min-width: $adaptive-width-tablet) {
+							padding-top: 5px;
+						}
+
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: block;
+							width: 20px;
+							height: 20px;
+							background-color: #F8F8F8;
+							@include radius(4px);
+						}
+					}
+
+					&:checked + label {
+						&:before {
+							background: $color-secondary url('../images/ico_v.svg') no-repeat 5px 5px;
+						}
+					}
+				}
+
+				label {
+					display: block;
+					cursor: pointer;
+					font-size: 12px;
+					line-height: 1.2;
+					color: $color-black;
+					padding-left: 39px;
+				}
+			}
+
+			.btn-line {
+				.btn {
+					width: 100%;
+					padding: 18px 28px 19px;
+					font-size: 18px;
+					font-weight: 400;
+					background-color: $color-secondary;
+					color: $color-white;
+					@include radius(100px);
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: auto;
+						padding: 17px 33px;
+					}
+
+					&:hover {
+						background-color: darken($color-secondary, 5%);
+					}
+				}
+			}
+		}
+
+		.modal-request & {
+			position: relative;
+			padding: 236px $padding-edges-mobile 30px;
+
+			@media (min-width: $adaptive-width-tablet) {
+				padding: 50px $padding-edges-tablet 45px;
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				padding: 79px 57px 80px;
+			}
+
+			@media (min-width: $adaptive-width-desktop-wide) {
+				padding: 79px 57px 80px 553px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 27px;
+				left: 24px;
+				width: 131px;
+				height: 174px;
+				background: url('../images/illustration5.png') no-repeat;
+				background-size: contain;
+
+				@media (min-width: $adaptive-width-tablet) {
+					display: none;
+				}
+
+				@media (min-width: $adaptive-width-desktop-wide) {
+					display: block;
+					top: 58px;
+					left: 78px;
+					width: 385px;
+					height: 514px;
+				}
+			}
+
+			.triplet {
+				display: flex;
+				justify-content: space-between;
+
+				& > .input {
+					width: 31%;
+					flex-basis: 31%;
+					margin-left: 3.23%;
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+
+			.thanks {
+				display: none;
+
+				@media (min-width: $adaptive-width-desktop-wide) {
+					padding: 142px 0 112px;
+				}
+
+				.text {
+					margin-bottom: 29px;
+				}
+
+				.btn {
+					padding: 17px 33px;
+					font-size: 18px;
+					font-weight: 400;
+					background-color: $color-secondary;
+					color: $color-white;
+					@include radius(100px);
+
+					&:hover {
+						background-color: darken($color-secondary, 5%);
+					}
+				}
+			}
+		}
+	}
+}

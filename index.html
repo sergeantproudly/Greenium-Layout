@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Гриниум - Пройдите тест и узнайте как вы влияете на планету"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+
+	<title>Гриниум - Пройдите тест и узнайте как вы влияете на планету</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/images/icons/android-chrome-256x256.png">
+	<link rel="manifest" href="/assets/images/site.webmanifest">
+	<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#7348BD">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="msapplication-TileColor" content="#7348BD">
+	<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+	<meta name="theme-color" content="#7348BD">
+
+	<meta property="og:image" content="/assets/images/og_preview.png">
+    <meta property="og:title" content="Гриниум">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Гриниум - Пройдите тест и узнайте как вы влияете на планету" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Гриниум" />
+    <meta name="twitter:description" content="Гриниум - Пройдите тест и узнайте как вы влияете на планету" />    
+    <meta name="twitter:image" content="/assets/images/og_preview.png" />
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+
+<body>
+	<div id="layout">
+		<div class="wrap">
+			<header class="quiz">
+				<div class="holder">
+					<a href="/" id="logo"><img src="assets/images/logo.svg" alt="Гриниум" title="Гриниум"></a>
+					<h1>Пройдите тест и узнайте, какое воздействие на планету оказываете лично вы, и как ваши привычки могут изменить климат</h1>
+				</div>
+			</header>
+
+			<main class="body">
+				<div id="quiz">
+					<div class="holder">
+						<ul class="window">
+							<li data-step-formula="(x*30*0.20826 + y*16*0.10227 + z*50*0.03549)*365" data-subvariants="true">
+								<div class="counter">Вопрос 1 из 6</div>
+								<h2>1. Сколько времени вы обычно проводите в транспорте ежедневно?</h2>
+
+								<ul>
+									<li>
+										<div class="photo"><img src="assets/images/quiz1_1.jpg" alt="Личное авто/такси"></div>		
+										<div class="answer">Личное авто/такси</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer1_1" id="answer1_1_1" data-step-action="x = 0.5"><label for="answer1_1_1">Менее часа</label></li>
+											<li><input type="radio" name="answer1_1" id="answer1_1_2" data-step-action="x = 2" data-default="true"><label for="answer1_1_2">1-3 часа</label></li>
+											<li><input type="radio" name="answer1_1" id="answer1_1_3" data-step-action="x = 3.5"><label for="answer1_1_3">больше трех</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz1_2.jpg" alt="Автобус/троллейбус/трамвай/метро"></div>		
+										<div class="answer">Автобус/троллейбус/трамвай/метро</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer1_2" id="answer1_2_1" data-step-action="y = 0.5"><label for="answer1_2_1">Менее часа</label></li>
+											<li><input type="radio" name="answer1_2" id="answer1_2_2" data-step-action="y = 1.5" data-default="true"><label for="answer1_2_2">1-2 часа</label></li>
+											<li><input type="radio" name="answer1_2" id="answer1_2_3" data-step-action="y = 3"><label for="answer1_2_3">больше двух</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz1_3.jpg" alt="Поезд/электричка"></div>		
+										<div class="answer">Поезд/электричка</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer1_3" id="answer1_3_1" data-step-action="z = 1"><label for="answer1_3_1">Менее 2 часов</label></li>
+											<li><input type="radio" name="answer1_3" id="answer1_3_2" data-step-action="z = 3.5" data-default="true"><label for="answer1_3_2">2-5 часов</label></li>
+											<li><input type="radio" name="answer1_3" id="answer1_3_3" data-step-action="z = 6"><label for="answer1_3_3">больше 5</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li data-step-formula="2*(x*9000*0.18362 + y*5400*0.18362 + z*1800*0.18362)" data-subvariants="true">
+								<div class="counter">Вопрос 2 из 6</div>
+								<h2>2. Как часто вы летаете на самолетах в год?</h2>
+
+								<ul>
+									<li>
+										<div class="photo"><img src="assets/images/quiz2_1.jpg" alt="Личное авто/такси"></div>		
+										<div class="answer">На другой конец планеты</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer2_1" id="answer2_1_1" data-step-action="x = 0"><label for="answer2_1_1">Не летаю</label></li>
+											<li><input type="radio" name="answer2_1" id="answer2_1_2" data-step-action="x = 1.5" data-default="true"><label for="answer2_1_2">1-2 раза</label></li>
+											<li><input type="radio" name="answer2_1" id="answer2_1_3" data-step-action="x = 3"><label for="answer2_1_3">больше 2 раз</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz2_2.jpg" alt="Автобус/троллейбус/трамвай/метро"></div>		
+										<div class="answer">Открыть новые места</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer2_2" id="answer2_2_1" data-step-action="y = 1"><label for="answer2_2_1">до 2 раз</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_2" data-step-action="y = 3" data-default="true"><label for="answer2_2_2">2-4 раза</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_3" data-step-action="y = 5"><label for="answer2_2_3">более 4 раза</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz2_3.jpg" alt="Поезд/электричка"></div>		
+										<div class="answer">По работе, в короткий отпуск</div>
+										<ul class="variants">
+											<li><input type="radio" name="answer2_3" id="answer2_3_1" data-step-action="z = 1"><label for="answer2_3_1">до 2 раз</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_2" data-step-action="z = 3" data-default="true"><label for="answer2_3_2">2-6 раз</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_3" data-step-action="z = 8"><label for="answer2_3_3">более 6 раз</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn back js-btn-back">Назад</button>
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li data-step-hold="true">
+								<div class="counter">Вопрос 3 из 6</div>
+								<h2>3. Площадь вашего жилья (на человека)? </h2>
+
+								<ul class="quad">
+									<li>
+										<div class="photo"><img src="assets/images/quiz3_1.jpg" alt="До 30 м²"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer3" id="answer3_1" data-step-action="EB*17/100*12"><label for="answer3_1">До 30 м²</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz3_2.jpg" alt="От 30 м² до 50 м²"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer3" id="answer3_2" data-step-action="EB*40/100*12"><label for="answer3_2">От 30 м² до 50 м²</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz3_3.jpg" alt="От 50 м² до 100 м²"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer3" id="answer3_3" data-step-action="EB*75/100*12"><label for="answer3_3">От 50 м² до 100 м²</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz3_4.jpg" alt="более 100 м²"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer3" id="answer3_4" data-step-action="EB*150/100*12"><label for="answer3_4">более 100 м²</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn back js-btn-back">Назад</button>
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li data-step-from-previous="true">
+								<div class="counter">Вопрос 4 из 6</div>
+								<h2>4. Используете ли вы энергосберегающие лампочки?</h2>
+
+								<ul class="quad">
+									<li>
+										<div class="photo"><img src="assets/images/quiz4_1.jpg" alt="Да"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer4" id="answer4_1" data-step-action="EB = 621.5"><label for="answer4_1">Да</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz4_2.jpg" alt="Нет"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer4" id="answer4_2" data-step-action="EB = 623.8"><label for="answer4_2">Нет</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz4_3.jpg" alt="Не знаю"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer4" id="answer4_3" data-step-action="EB = 623.8"><label for="answer4_3">Не знаю</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn back js-btn-back">Назад</button>
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li>
+								<div class="counter">Вопрос 5 из 6</div>
+								<h2>5. Что вы съели бы на ужин (и не только)?</h2>
+
+								<ul class="cinc">
+									<li>
+										<div class="photo"><img src="assets/images/quiz5_1.jpg" alt="Заядлый мясоед"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer5" id="answer5_1" data-step-action="695.9*12"><label for="answer5_1">Заядлый мясоед</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz5_2.jpg" alt="Умеренный мясоед"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer5" id="answer5_2" data-step-action="636.3*12"><label for="answer5_2">Умеренный мясоед</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz5_3.jpg" alt="Пескетарианец"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer5" id="answer5_3" data-step-action="586*12"><label for="answer5_3">Пескетарианец</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz5_4.jpg" alt="Вегетарианец"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer5" id="answer5_4" data-step-action="564.9*12"><label for="answer5_4">Вегетарианец</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz5_5.jpg" alt="Веган"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer5" id="answer5_5" data-step-action="544*12"><label for="answer5_5">Веган</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn back js-btn-back">Назад</button>
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li>
+								<div class="counter">Вопрос 6 из 6</div>
+								<h2>6. Как часто вы покупаете новую одежду?</h2>
+
+								<ul>
+									<li>
+										<div class="photo"><img src="assets/images/quiz6_1.jpg" alt="Покупаю в секонд хенде"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer6" id="answer6_1" data-step-action="4*0.04568*12"><label for="answer6_1">Покупаю в секонд хенде</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz6_2.jpg" alt="1 раз в месяц"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer6" id="answer6_2" data-step-action="12*6.693*12"><label for="answer6_2">1 раз в месяц</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz6_3.jpg" alt="1 раз в сезон (4 раза в год)"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer6" id="answer6_3" data-step-action="4*6.693*12"><label for="answer6_3">1 раз в сезон (4&nbsp;раза&nbsp;в&nbsp;год)</label></li>
+										</ul>
+									</li>
+									<li>
+										<div class="photo"><img src="assets/images/quiz6_4.jpg" alt="Покупаю в секонд хенде"></div>
+										<ul class="variants">
+											<li><input type="radio" name="answer6" id="answer6_4" data-step-action="1*6.693*12"><label for="answer6_4">1 раз в год</label></li>
+										</ul>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn back js-btn-back">Назад</button>
+									<button class="btn js-btn-next">Дальше</button>
+								</div>
+							</li>
+
+							<li id="quiz-final">
+								<div class="pic"></div>								
+								<div class="heading"></div>
+								<div class="subheading"></div>
+								<div class="text"></div>
+								<div class="share">
+									<a href="#" class="tg" target="_blank" rel="nofollow">Поделиться</a>
+									<a href="#" class="vk" target="_blank" rel="nofollow">Поделиться</a>
+								</div>
+							</li>
+						</ul>
+					</div>		
+				</div>
+
+				<div id="about-quiz">
+					<div class="holder">
+						<h2 class="h1">О тесте</h2>
+						<div class="text">
+							<p>В основу опроса (НАЗВАНИЕ) заложен калькулятор углеродного следа, позволяющий рассчитать, как деятельность отдельного человека влияет на изменение климата. Углекислый газ (СО2), находящийся в верхних слоях атмосферы, удерживает тепло и не дает средней температуре Земли опуститься до – 19,5 С ̊. В случае, если уровень т.н. парниковых газов продолжит расти, может случиться непоправимое и Земля, как и все живое на ней не сможет пережить глобальной экологической катастрофы.</p>
+							<p>Не допустить необратимое изменение климата в наших силах! В деле экологии важен каждый! О том, что… читайте на интернет-платформе Greenium.</p>
+						</div>
+						<div class="btn-line">
+							<a href="#about-us" class="btn js-anchor">Читать о Гриниум</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="about-us">
+					<h2 class="h1">О нас</h2>
+
+					<div class="holder">
+						<div class="info">
+							<div class="col1">
+								<h3 class="h1">Людям</h3>
+								<ul>
+									<li>Мечтали внести свой вклад в&nbsp;сохранение природы, но не&nbsp;знали как?</li>
+									<li>У вас есть собственные идеи и&nbsp;большое желание найти единомышленников?</li>
+								</ul>
+							</div>
+							<div class="col2">
+								<h3 class="h1">Бизнесу</h3>
+								<ul>
+									<li>Хотите рассказать о&nbsp;зеленой повестке&nbsp;вашей&nbsp;компании?</li>
+									<li>Ищите самую актуальную информацию о&nbsp;последних изменениях законодательства, новых технологиях, интересных стартапах?</li>
+									<li>Готовы поддержать людей, встающих на путь экологической ответственности?</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="holder">
+						<h2 class="welcome">Присоединяйтесь к платформе Greenium и&nbsp;скоро увидите, как ваши действия влияют на сохранение окружающей среды!</h2>
+						<div class="btn-line">
+							<button class="btn js-modal-link" data-target="#modal-request">Присоединиться</button>
+						</div>
+					</div>
+
+					<div class="illustration1"></div>
+					<div class="illustration2"></div>
+				</div>
+			</main>
+
+			<footer class="quiz">
+				<div class="holder">
+					<div id="copyright">&copy; 2022 Greenium. <br>Все права защищены</div>
+					<ul id="mn-law">
+						<li><a href="#">Персональные данные</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+					</ul>
+					<ul id="mn-ss">
+						<li><a href="#"><img src="assets/images/ico_telegram.svg" alt="Поделиться в Telegram"></a></li>
+						<li><a href="#"><img src="assets/images/ico_vk.svg" alt="Поделиться во Vkontakte"></a></li>
+					</ul>
+				</div>
+			</footer>
+
+			<div class="blur"></div>
+			<div class="blur2"></div>
+			<div class="decoration"></div>
+			<div class="decoration2"></div>
+		</div>
+	</div>
+
+	<div id="modal-fadeout"></div>
+
+    <div class="modal-wrapper modal-request" id="modal-request">
+        <div class="modal">
+            <div class="contents">
+                <div class="modal-close" title="Закрыть"></div>
+
+                <div class="info">
+                	<div class="h1">Присоединяйтесь <br>к платформе Гриниум!</div>
+	                <div class="text">
+	                	<p>Если Вы хотите рассказать о&nbsp;себе и&nbsp;присоединиться к&nbsp;проекту, оставьте Ваши контактные данные, и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+	                </div>
+	                <div class="form">
+	                	<form action="/" method="post" id="request-form">
+	                		<div class="row triplet">
+	                			<div class="input">
+	                				<input type="text" name="name" placeholder="Ваше имя" maxlength="255" required>
+									<i>Ваше имя</i>
+	                			</div>
+	                			<div class="input">
+	                				<input type="email" name="email" placeholder="E-mail" maxlength="255" required>
+									<i>E-mail</i>
+	                			</div>
+	                			<div class="input">
+	                				<input type="tel" name="tel" placeholder="Телефон" maxlength="255" required>
+									<i>Телефон</i>
+	                			</div>
+	                		</div>
+	                		<div class="row">
+	                			<div class="input">
+	                				<textarea name="text" placeholder="Сообщение"></textarea>
+	                				<i>Сообщение</i>
+	                			</div>
+	                		</div>
+	                		<div class="cb-line">
+	                			<input type="checkbox" name="agree" checked id="request-agree"><label for="request-agree">Я ознакомился(ась) с правилами политикой конфиденциальности и принимаю их условия</label>
+	                		</div>
+	                		<div class="btn-line">
+	                			<input type="submit" name="_submit" value="Присоединиться" class="btn">
+	                		</div>
+	                	</form>
+	                </div>
+                </div>
+
+                <div class="thanks">
+                	<div class="h1">Спасибо!</div>
+
+	                <div class="text">
+	                    <p>Мы уже получили вашу заявку, как только наша платформа будет запущена, вы узнаете об этом первыми!</p>
+	                </div>
+	                <div class="btn-line">
+	                	<button class="btn close-btn">Хорошо</button>
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="/assets/js/scripts.js?1"></script>
+</body>
+</html>
