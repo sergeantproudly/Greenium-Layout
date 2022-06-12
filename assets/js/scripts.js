@@ -2524,7 +2524,7 @@ var quizApp = function() {
 
 		this.dom.final.children('.pic').html('<img src="' + data.pic + '" alt="' + data.heading + '">');
 		this.dom.final.children('.heading').html(data.heading);
-		this.dom.final.children('.subheading').html(data.subheading.replace('$sum', Math.round(this.getTotalSum())));
+		this.dom.final.children('.subheading').html(data.subheading.replace('$sum', Math.round(this.getTotalSum() / 12)));
 		this.dom.final.children('.text').html('<p>' + data.text + '</p>');
 		this.dom.final.children('.share').children('.tg').attr('href', 'https://t.me/share/url?url=' + encodeURIComponent(this.siteUrl) + '&text=' + encodeURIComponent(data.shareText));
 		this.dom.final.children('.share').children('.vk').attr('href', 'https://vk.com/share.php?url=' + encodeURIComponent(this.siteUrl) + '&title=' + encodeURIComponent(data.heading) + '&image=' + encodeURIComponent(data.pic) + '&description=' + encodeURIComponent(data.shareText));
