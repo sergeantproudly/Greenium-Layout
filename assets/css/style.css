@@ -1163,6 +1163,10 @@ a.dotted {
   }
 }
 
+.modal > .contents .error {
+  color: #FF0000;
+}
+
 .modal > .contents .form .input {
   margin-bottom: 21px;
 }
@@ -2096,6 +2100,7 @@ header > .holder {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 1252px) {
@@ -2176,6 +2181,10 @@ header.quiz {
     padding-top: 60px;
     margin-bottom: 46px;
   }
+}
+
+header.quiz > .holder {
+  align-items: flex-start;
 }
 
 header.quiz #logo {
@@ -2528,6 +2537,10 @@ footer #mn-ss > li img {
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+#quiz > .holder > ul > li > ul > li > ul > li input[type="radio"] + label {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #quiz > .holder > ul > li > ul > li > ul > li input[type="radio"] + label:before {

@@ -49,7 +49,7 @@
 				<div id="quiz">
 					<div class="holder">
 						<ul class="window">
-							<li data-step-formula="(x*30*0.20826 + y*16*0.10227 + z*50*0.03549)*365" data-subvariants="true">
+							<li data-step-formula="(x*30*0.20826 + y*16*0.06504 + z*50*0.03549)*365" data-subvariants="true">
 								<div class="counter">Вопрос 1 из 6</div>
 								<h2>1. Сколько времени вы обычно проводите в транспорте ежедневно?</h2>
 
@@ -95,7 +95,7 @@
 								<ul>
 									<li>
 										<div class="photo"><img src="assets/images/quiz2_1.jpg" alt="Личное авто/такси"></div>		
-										<div class="answer">На другой конец планеты</div>
+										<div class="answer">Дольше 8 часов</div>
 										<ul class="variants">
 											<li><input type="radio" name="answer2_1" id="answer2_1_1" data-step-action="x = 0"><label for="answer2_1_1">Не летаю</label></li>
 											<li><input type="radio" name="answer2_1" id="answer2_1_2" data-step-action="x = 1.5" data-default="true"><label for="answer2_1_2">1-2 раза</label></li>
@@ -104,20 +104,22 @@
 									</li>
 									<li>
 										<div class="photo"><img src="assets/images/quiz2_2.jpg" alt="Автобус/троллейбус/трамвай/метро"></div>		
-										<div class="answer">Открыть новые места</div>
+										<div class="answer">От 4 до 8 часов</div>
 										<ul class="variants">
-											<li><input type="radio" name="answer2_2" id="answer2_2_1" data-step-action="y = 1"><label for="answer2_2_1">до 2 раз</label></li>
-											<li><input type="radio" name="answer2_2" id="answer2_2_2" data-step-action="y = 3" data-default="true"><label for="answer2_2_2">2-4 раза</label></li>
-											<li><input type="radio" name="answer2_2" id="answer2_2_3" data-step-action="y = 5"><label for="answer2_2_3">более 4 раза</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_1" data-step-action="y = 0"><label for="answer2_2_1">Не летаю</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_2" data-step-action="y = 1"><label for="answer2_2_2">до 2 раз</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_3" data-step-action="y = 3" data-default="true"><label for="answer2_2_3">2-4 раза</label></li>
+											<li><input type="radio" name="answer2_2" id="answer2_2_4" data-step-action="y = 5"><label for="answer2_2_4">более 4 раза</label></li>
 										</ul>
 									</li>
 									<li>
 										<div class="photo"><img src="assets/images/quiz2_3.jpg" alt="Поезд/электричка"></div>		
-										<div class="answer">По работе, в короткий отпуск</div>
+										<div class="answer">Менее 4 часов</div>
 										<ul class="variants">
-											<li><input type="radio" name="answer2_3" id="answer2_3_1" data-step-action="z = 1"><label for="answer2_3_1">до 2 раз</label></li>
-											<li><input type="radio" name="answer2_3" id="answer2_3_2" data-step-action="z = 3" data-default="true"><label for="answer2_3_2">2-6 раз</label></li>
-											<li><input type="radio" name="answer2_3" id="answer2_3_3" data-step-action="z = 8"><label for="answer2_3_3">более 6 раз</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_1" data-step-action="z = 0"><label for="answer2_3_1">Не летаю</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_2" data-step-action="z = 1"><label for="answer2_3_2">до 2 раз</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_3" data-step-action="z = 3" data-default="true"><label for="answer2_3_3">2-6 раз</label></li>
+											<li><input type="radio" name="answer2_3" id="answer2_3_4" data-step-action="z = 8"><label for="answer2_3_4">более 6 раз</label></li>
 										</ul>
 									</li>
 								</ul>
@@ -372,7 +374,7 @@
 	                	<p>Если Вы хотите рассказать о&nbsp;себе и&nbsp;присоединиться к&nbsp;проекту, оставьте Ваши контактные данные, и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
 	                </div>
 	                <div class="form">
-	                	<form action="/" method="post" id="request-form">
+	                	<form action="/" method="post" id="request-form" data-on-error="Произошла ошибка при отправке, пожалуйста, отправьте форму повторно:">
 	                		<div class="row triplet">
 	                			<div class="input">
 	                				<input type="text" name="name" placeholder="Ваше имя" maxlength="255" required>

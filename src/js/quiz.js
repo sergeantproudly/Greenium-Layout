@@ -19,33 +19,33 @@ var quizApp = function() {
 			interval: [0, 20000],
 			pic: '/assets/images/dino1.png',
 			heading: 'Вы — йог-аскет',
-			subheading: 'Ваш след 980 гр СО2е в месяц. <br>Это на 90% меньше, чем у&nbsp;большинства россиян',
+			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Таким углеродным следом могут похвастаться лишь 10% россиян.',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я йог-аскет, а ты?'
+			shareText: 'Я — йог-аскет, а ты?'
 		},
 		{
 			interval: [20000, 32000],
 			pic: '/assets/images/dino2.png',
-			heading: 'Вы — в глубине души &quot;зеленый&quot;',
-			subheading: 'Ваш след 980 гр СО2е в месяц. <br>Это на 80% меньше, чем у&nbsp;большинства россиян',
+			heading: 'Вы — раскрепощенный обыватель',
+			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Лишь 30% россиян гененируют след как у&nbsp;вас или меньше',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я в глубине души "зеленый", а ты?'
+			shareText: 'Я — раскрепощенный обыватель, а ты?'
 		},
 		{
 			interval: [32000, 40000],
 			pic: '/assets/images/dino3.png',
 			heading: 'Вы — кандидат на SkyPriority',
-			subheading: 'Ваш след 980 гр СО2е в месяц. <br>Это на 70% меньше, чем у&nbsp;большинства россиян',
+			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Есть куда стремиться&nbsp;- у более, чем 50% россиян след меньше',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я кандидат на SkyPriority, а ты?'
+			shareText: 'Я — кандидат на SkyPriority, а ты?'
 		},
 		{
 			interval: [40000, 1000000],
 			pic: '/assets/images/dino4.png',
 			heading: 'Вы — неспящий вулкан',
-			subheading: 'Ваш след 980 гр СО2е в месяц. <br>Это на 40% меньше, чем у&nbsp;большинства россиян',
+			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Еще немного, и&nbsp;вы станете чемпионом по углеродному следу&nbsp;- вы уже обогнали 90% россиян',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я неспящий вулкан, а ты?'
+			shareText: 'Я — неспящий вулкан, а ты?'
 		}
 	];
 
@@ -142,7 +142,7 @@ var quizApp = function() {
 		}
 
 		this.index++;
-		//console.log(this.sum);
+		console.log(this.sum);
 		return true;
 	}
 
@@ -183,7 +183,7 @@ var quizApp = function() {
 
 		this.dom.final.children('.pic').html('<img src="' + data.pic + '" alt="' + data.heading + '">');
 		this.dom.final.children('.heading').html(data.heading);
-		this.dom.final.children('.subheading').html(data.subheading);
+		this.dom.final.children('.subheading').html(data.subheading.replace('$sum', Math.round(this.getTotalSum())));
 		this.dom.final.children('.text').html('<p>' + data.text + '</p>');
 		this.dom.final.children('.share').children('.tg').attr('href', 'https://t.me/share/url?url=' + encodeURIComponent(this.siteUrl) + '&text=' + encodeURIComponent(data.shareText));
 		this.dom.final.children('.share').children('.vk').attr('href', 'https://vk.com/share.php?url=' + encodeURIComponent(this.siteUrl) + '&title=' + encodeURIComponent(data.heading) + '&image=' + encodeURIComponent(data.pic) + '&description=' + encodeURIComponent(data.shareText));

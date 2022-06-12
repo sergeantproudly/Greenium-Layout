@@ -87,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				var $liNext = $(this).closest('li').next('li');
 				if ($liNext.attr('id') == 'quiz-final') {
 					quiz.buildFinal();
+					if (__isMobile) {
+						$('html,body').animate({
+							scrollTop: 0
+						}, 1000);
+					}
 				}
 				if ($liNext.length) {
 					$liNext.stop().fadeIn(__animationSpeed, function() {
@@ -99,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
 							});
 						}
 					});
+					if (!inViewport($liNext)) {
+						_scrollTo($liNext, $(window).height() * -0.2);
+					}
 				}
 			});
 		}
@@ -111,6 +119,10 @@ document.addEventListener('DOMContentLoaded', function() {
 				var $liPrev = $(this).closest('li').prev('li');
 				if ($liPrev.length) {
 					$liPrev.stop().fadeIn(__animationSpeed);
+
+					if (!inViewport($liPrev)) {
+						_scrollTo($liPrev, $(window).height() * -0.2);
+					}
 				}
 			});
 		}
@@ -118,16 +130,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// отправка формы заявки
 	$('#request-form .btn').click(function(e) {
-		e.preventDefault();
-		e.stopPropagation();
+		//e.preventDefault();
+		//e.stopPropagation();
 
 		$('#request-form').find('input, textarea').addClass('attempted');
+	});
+	$('#request-form').on('submit', function(e) {
+		e.preventDefault();
 
 		if ($('#request-agree').prop('checked')) {
 			// POST HERE
+			var url = 'https://proudly.ru';
 
-			$('#modal-request .info').stop().slideUp(__animationSpeed);
-			$('#modal-request .thanks').stop().slideDown(__animationSpeed);
+			$.ajax({
+			    url: url,
+			    type: 'POST',
+			    data: $('#request-form').serialize(),
+			    dataType: 'json',
+			    success: function(response) {
+			        $('#modal-request .info').stop().slideUp(__animationSpeed);
+					$('#modal-request .thanks').stop().slideDown(__animationSpeed);
+			    },
+			    error: function(response) {
+			    	$('#modal-request .info .text').text($('#request-form').attr('data-on-error')).addClass('error');
+			    	console.log(response);
+			    }
+			});
 		}
 	});
 

@@ -398,6 +398,23 @@ function _scrollTo(target, offset) {
 	}, 1000);
 }
 
+function inViewport(element, whole) {
+	if (typeof(whole) == 'undefined') whole = false;
+
+	var st = $(this).scrollTop();
+	var offset = $(window).height();
+	var top = $(element).offset().top;
+	var height = $(element).outerHeight();	
+
+	if (whole) {
+		var test = (st >= top - offset) && (st <= top + height);
+	} else {
+		var test = (st >= top - offset) && (st <= top);
+	}
+	
+	return test;
+}
+
 function redirect(url) {
   window.location = url;
 }

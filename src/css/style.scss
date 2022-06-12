@@ -131,6 +131,7 @@ header {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 
 		@media (min-width: $adaptive-width-desktop-wide) {
 			flex-direction: row;
@@ -192,6 +193,10 @@ header {
 		@media (min-width: $adaptive-width-desktop) {
 			padding-top: 60px;
 			margin-bottom: 46px;
+		}
+
+		& > .holder {
+			align-items: flex-start;
 		}
 
 		#logo {
@@ -488,6 +493,8 @@ footer {
 									opacity: 0;
 
 									& + label {
+										-webkit-tap-highlight-color: transparent;
+
 										&:before {
 											content: '';
 											display: block;
