@@ -24,8 +24,8 @@
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Гриниум - Пройдите тест и узнайте, как вы влияете на планету" />
-    <meta property="og:url" content="#" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:url" content="http://гриниум.рф/" />
+    <meta property="og:site_name" content="Гриниум" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -287,6 +287,7 @@
 									<a href="#" class="tg" target="_blank" rel="nofollow">Поделиться</a>
 									<a href="#" class="vk" target="_blank" rel="nofollow">Поделиться</a>
 								</div>
+								<input type="radio" class="hidden" name="quiz-result" id="quiz-result">
 							</li>
 						</ul>
 					</div>		
@@ -347,12 +348,13 @@
 				<div class="holder">
 					<div id="copyright">&copy; 2022 Greenium. <br>Все права защищены</div>
 					<ul id="mn-law">
-						<li><a href="#">Персональные данные</a></li>
-						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="/dl/user_agreement.pdf">Персональные данные</a></li>
+						<li><a href="/dl/privacy_policy.pdf">Политика конфиденциальности</a></li>
 					</ul>
 					<ul id="mn-ss">
-						<li><a href="#"><img src="assets/images/ico_telegram.svg" alt="Поделиться в Telegram"></a></li>
-						<li><a href="#"><img src="assets/images/ico_vk.svg" alt="Поделиться во Vkontakte"></a></li>
+						<li><a href="mailto:офис@гриниум.рф" target="_blank"><img src="assets/images/ico_email.svg" alt="Написать на почту"></a></li>
+						<li><a href="https://t.me/greeni_um" target="_blank"><img src="assets/images/ico_telegram.svg" alt="Поделиться в Telegram"></a></li>
+						<li><a href="https://vk.com/club213844259" target="_blank"><img src="assets/images/ico_vk.svg" alt="Поделиться во Vkontakte"></a></li>
 					</ul>
 				</div>
 			</footer>
@@ -422,6 +424,25 @@
         </div>
     </div>
 
+    <script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+
+		const firebaseConfig = {
+		    apiKey: "AIzaSyBOGEgknwuiUkIwMReAcNtx8bkTnHmalBM",
+		    authDomain: "greenium-4af70.firebaseapp.com",
+		    projectId: "greenium-4af70",
+		    storageBucket: "greenium-4af70.appspot.com",
+		    messagingSenderId: "423610705347",
+		    appId: "1:423610705347:web:22a163d7418af6ad924976",
+		    measurementId: "G-LFZE7R7G0D"
+		};
+
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+
+		document.getElementById('quiz-result').addEventListener('change', function (e) { console.log('gotcha'); console.log(e); }, false);
+	</script>
 	<script src="/assets/js/scripts.js?2"></script>
 </body>
 </html>

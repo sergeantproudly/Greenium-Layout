@@ -2362,7 +2362,8 @@ var quizApp = function() {
 			heading: 'Вы — йог-аскет',
 			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Таким углеродным следом могут похвастаться лишь 10% россиян.',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я — йог-аскет, а ты?'
+			shareText: 'Я — йог-аскет, а ты?',
+			analyticsEvent: 'test_finished_1'
 		},
 		{
 			interval: [20000, 32000],
@@ -2370,7 +2371,8 @@ var quizApp = function() {
 			heading: 'Вы — раскрепощенный обыватель',
 			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Лишь 30% россиян гененируют след как у&nbsp;вас или меньше',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я — раскрепощенный обыватель, а ты?'
+			shareText: 'Я — раскрепощенный обыватель, а ты?',
+			analyticsEvent: 'test_finished_2'
 		},
 		{
 			interval: [32000, 40000],
@@ -2378,7 +2380,8 @@ var quizApp = function() {
 			heading: 'Вы — кандидат на SkyPriority',
 			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Есть куда стремиться&nbsp;- у более, чем 50% россиян след меньше',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я — кандидат на SkyPriority, а ты?'
+			shareText: 'Я — кандидат на SkyPriority, а ты?',
+			analyticsEvent: 'test_finished_3'
 		},
 		{
 			interval: [40000, 1000000],
@@ -2386,7 +2389,8 @@ var quizApp = function() {
 			heading: 'Вы — неспящий вулкан',
 			subheading: 'Ваш след $sum гр СО2е в месяц. <br>Еще немного, и&nbsp;вы станете чемпионом по углеродному следу&nbsp;- вы уже обогнали 90% россиян',
 			text: 'Иногда природе можно помочь. Примите участие в&nbsp;экологической акции, и вы сможете внести свой вклад в&nbsp;улучшение экологии, не меняя своих привычек, но в&nbsp;ближайшие годы летом будет значительно жарче.',
-			shareText: 'Я — неспящий вулкан, а ты?'
+			shareText: 'Я — неспящий вулкан, а ты?',
+			analyticsEvent: 'test_finished_4'
 		}
 	];
 
@@ -2528,6 +2532,8 @@ var quizApp = function() {
 		this.dom.final.children('.text').html('<p>' + data.text + '</p>');
 		this.dom.final.children('.share').children('.tg').attr('href', 'https://t.me/share/url?url=' + encodeURIComponent(this.siteUrl) + '&text=' + encodeURIComponent(data.shareText));
 		this.dom.final.children('.share').children('.vk').attr('href', 'https://vk.com/share.php?url=' + encodeURIComponent(this.siteUrl) + '&title=' + encodeURIComponent(data.heading) + '&image=' + encodeURIComponent(data.pic) + '&description=' + encodeURIComponent(data.shareText));
+
+		$('#quiz-result').val(data.analyticsEvent);
 	}
 
 }
